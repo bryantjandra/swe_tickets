@@ -1,36 +1,35 @@
+import { createServerComponentClient } from "@supabase/auth-helpers-nextjs";
 import { notFound } from "next/navigation";
+import { cookies } from "next/headers";
 
 export const dynamicParms = true;
 
 export async function generateMetadata({ params }) {
-  const id = params.id;
-  const response = await fetch(`http://localhost:4000/tickets/${id}`);
-  const ticket = await response.json();
+  const supabase = createServerComponentClient({ cookies });
+  const { data: ticket } = await supabase
+    .from("Titles")
+    .select()
+    .eq("id", params.id)
+    .single();
 
   return {
-    title: `SWE Tickets | ${ticket.title}`,
+    title: `SWE Tickets | ${ticket?.title || "Ticket not found"}`,
   };
 }
 
-export async function generateStaticParams() {
-  const response = await fetch("http://localhost:4000/tickets");
-  const tickets = await response.json();
-  return tickets.map((ticket) => ({
-    id: ticket.id,
-  }));
-}
-
 async function getTicket(id) {
-  const response = await fetch("http://localhost:4000/tickets/" + id, {
-    next: {
-      revalidate: 60,
-    },
-  });
+  const supabase = createServerComponentClient({ cookies });
+  const { data } = await supabase
+    .from("Tickets")
+    .select()
+    .eq("id", id)
+    .single();
 
-  if (!response.ok) {
+  if (!data) {
     notFound();
   }
-  return response.json();
+
+  return data;
 }
 
 async function TicketDetails({ params }) {
