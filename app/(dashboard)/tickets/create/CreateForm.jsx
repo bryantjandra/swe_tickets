@@ -29,7 +29,7 @@ export default function CreateForm() {
 
     const data = await res.json();
     if (data.error) {
-      console.log(error.message);
+      console.log(data.error.message);
     }
 
     if (data) {
