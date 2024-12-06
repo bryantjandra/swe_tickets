@@ -1,9 +1,18 @@
+import { createServerComponentClient } from "@supabase/auth-helpers-nextjs";
+import { cookies } from "next/headers";
 import Navbar from "../components/Navbar";
 
-function DashboardLayout({ children }) {
+async function DashboardLayout({ children }) {
+  const supabase = createServerComponentClient({ cookies });
+  const { data } = await supabase.auth.getSession();
+
+  console.log("Session data:", data); // Log session data to see what's returned
+
+  const user = data?.session?.user;
+
   return (
     <>
-      <Navbar />
+      <Navbar user={user} />
       {children}
     </>
   );
