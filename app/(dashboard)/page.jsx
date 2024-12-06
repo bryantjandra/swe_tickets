@@ -5,12 +5,10 @@ export default function Home() {
     <main>
       <h2>Dashboard</h2>
       <p>
-        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Vero
-        repellendus tempore, exercitationem odit, quasi doloremque possimus
-        recusandae alias sequi totam soluta natus iure eius, obcaecati sint
-        dolores blanditiis aspernatur quo officia iusto ut. Et, aliquid sed
-        voluptates iste cum totam, facere explicabo, fugit suscipit ratione
-        aspernatur consequuntur ex mollitia quaerat?
+        Welcome to the SWE Tickets Dashboard! Here, we can track, manage, and
+        resolve our support tickets efficiently. Whether we're handling bug
+        reports, feature requests, or customer inquiries, this platform provides
+        the tools to streamline our workflow and keep everything organized.
       </p>
 
       <div className="flex justify-center my-8">
@@ -22,22 +20,20 @@ export default function Home() {
       <h2>Company Updates</h2>
 
       <div className="card">
-        <h3>New member of the web dev team...</h3>
+        <h3>New Team Member Alert!</h3>
         <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt, at
-          quam. Dolores omnis possimus quam soluta rerum illo laborum ullam
-          pariatur molestiae, modi beatae corrupti.
+          We're excited to welcome John Doe to our web development team! John
+          brings 5+ years of experience in frontend development and will be
+          working on enhancing the SWE Tickets platform's user experience.
         </p>
       </div>
       <div className="card">
-        <h3>New website live!</h3>
+        <h3>Platform Redesign Launch!</h3>
         <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt, at
-          quam. Dolores omnis possimus quam soluta rerum illo laborum ullam
-          pariatur molestiae, modi beatae corrupti, assumenda distinctio
-          adipisci, cupiditate minima eum vitae? Similique dicta est facilis
-          debitis, autem temporibus quo repellat illum unde id iste veritatis
-          eveniet, aspernatur enim quas.
+          We're thrilled to announce the launch of the newly redesigned SWE
+          Tickets platform. The updated interface offers a more intuitive
+          layout, improved performance, and exciting new features to help us all
+          manage our tickets.
         </p>
       </div>
     </main>
