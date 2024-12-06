@@ -11,9 +11,12 @@ function DeleteButton({ id }) {
     setIsLoading(true);
 
     try {
-      const res = await fetch(`http://localhost:3000/api/tickets/${id}`, {
-        method: "DELETE",
-      });
+      const res = await fetch(
+        `${process.env.NEXT_PUBLIC_API_URL}/api/tickets/${id}`,
+        {
+          method: "DELETE",
+        }
+      );
 
       if (!res.ok) {
         const errorMessage = `Failed to delete ticket: ${res.statusText}`;
