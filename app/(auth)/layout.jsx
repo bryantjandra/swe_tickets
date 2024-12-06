@@ -1,6 +1,15 @@
+import { createServerComponentClient } from "@supabase/auth-helpers-nextjs";
+import { redirect } from "next/navigation";
+import { cookies } from "next/headers";
 import Link from "next/link";
 
-function AuthLayout({ children }) {
+async function AuthLayout({ children }) {
+  const supabase = createServerComponentClient({ cookies });
+  const { data } = await supabase.auth.getSession();
+
+  if (data.session) {
+    redirect("/");
+  }
   return (
     <>
       <nav>
