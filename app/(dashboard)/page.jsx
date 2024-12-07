@@ -6,7 +6,7 @@ export default function Home() {
       <h2>Dashboard</h2>
       <p>
         Welcome to the SWE Tickets Dashboard! Here, we can track, manage, and
-        resolve our support tickets efficiently. Whether we're handling bug
+        resolve our support tickets efficiently. Whether we&#39;re handling bug
         reports, feature requests, or customer inquiries, this platform provides
         the tools to streamline our workflow and keep everything organized.
       </p>
@@ -22,15 +22,15 @@ export default function Home() {
       <div className="card">
         <h3>New Team Member Alert!</h3>
         <p>
-          We're excited to welcome John Doe to our web development team! John
-          brings 5+ years of experience in frontend development and will be
-          working on enhancing the SWE Tickets platform's user experience.
+          We&#39;re excited to welcome John Doe to our web development team!
+          John brings 5+ years of experience in frontend development and will be
+          working on enhancing the SWE Tickets platform&#39;s user experience.
         </p>
       </div>
       <div className="card">
         <h3>Platform Redesign Launch!</h3>
         <p>
-          We're thrilled to announce the launch of the newly redesigned SWE
+          We&#39;re thrilled to announce the launch of the newly redesigned SWE
           Tickets platform. The updated interface offers a more intuitive
           layout, improved performance, and exciting new features to help us all
           manage our tickets.
