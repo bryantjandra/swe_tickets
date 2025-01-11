@@ -22,6 +22,11 @@ Try it out here: [https://swetickets.netlify.app/](https://swetickets.netlify.ap
 
 ---
 
+# Layout 
+> ![Screenshot](./data/ticketpage.png)
+
+---
+
 ## 🛠️ Tech Stack
 
 - **Frontend**: React, Next.js (App Router)
