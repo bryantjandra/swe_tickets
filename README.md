@@ -7,8 +7,8 @@ SWE Tickets is a simple, user-friendly ticket management system designed for dev
 ## 🚀 Live Demo
 
 Try it out here: [https://swetickets.netlify.app/](https://swetickets.netlify.app/)
-Guest Email: guest@gmail.com
-Guest Password: test1234
+- **Guest Email**: guest@gmail.com
+- **Guest Password**: test1234
 
 ---
 
